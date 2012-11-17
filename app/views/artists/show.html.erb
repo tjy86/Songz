@@ -9,6 +9,13 @@
 	Photo:
 	<%= image_tag @artist.photo %>
 	</span>
+
+<div class='meta'>
+    <% @artist.albums.each do |album| %>
+    <%= album.name %>
+    <% end %>
+</div>
+
 <%= link_to 'Edit', edit_artist_path(@artist),:class => "button" %>
 <%= link_to 'Back', artists_path, :class => "button" %>
 </div>

@@ -9,6 +9,14 @@
 	  Album Photo:
 	  <%= image_tag @album.photo, :class => "photo" %>
   </span>
+
+<div class='meta'>
+    <% @album.songs.each do |song| %>
+    <%= song.name %>
+    <% end %>
+</div>
+
 <%= link_to 'Edit', edit_album_path(@album), :class => "button" %>
 <%= link_to 'Back', albums_path, :class => "button" %>
 </div>
+
