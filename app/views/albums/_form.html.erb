@@ -1,7 +1,6 @@
+<%= render :partial => 'shared/errors', :locals => {:object => @album} %>
+
 <%= form_for(@album, :html => {:multipart => true}) do |f| %>
-  <% if @album.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this person from being saved:</h2>
 
       <ul>
       <% @album.errors.full_messages.each do |msg| %>
@@ -17,12 +16,20 @@
   </div>
   <div class="field">
     <%= f.label :photo %><br />
-
     <%= f.file_field :photo %>
     <%= f.hidden_field :photo_cache %>
+     <%= label_tag "Add URL for photo" %>
     <%= image_tag(@album.photo_url) if @album.photo? %>
     <%= f.text_field :remote_photo_url %>
   </div>
+
+  <div class='field'>
+    <% Album.all.each do |album| %>
+      <%= check_box_tag 'album[song_ids][]', song.id, song.in?(@album.songs.to_a) %>
+      <span><%= song.name %></span>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,8 +1,8 @@
 
+<%= render :partial => 'shared/errors', :locals => {:object => @song} %>
+
+
 <%= form_for(@song, :html => {:multipart => true}) do |f| %>
-  <% if @song.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this person from being saved:</h2>
 
       <ul>
       <% @song.errors.full_messages.each do |msg| %>
@@ -25,9 +25,9 @@
   </div>
   <div class="field">
     <%= f.label :photo %><br />
-
     <%= f.file_field :photo %>
     <%= f.hidden_field :photo_cache %>
+    <%= label_tag "Add URL for photo" %>
     <%= image_tag(@song.photo_url) if @song.photo? %>
     <%= f.text_field :remote_photo_url %>
   </div>
