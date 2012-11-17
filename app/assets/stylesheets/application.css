@@ -1,17 +1,56 @@
-/*= require 'reset'
+/*
+ *= require 'reset'
  *= require '960_12_col'
  *= require_self
  */
 
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
 
- header {
- 	background-color: #87C50D;
- 	text-decoration: none;
- 	height: 50px;
- }
+a {
+	text-decoration: none;
+}
 
- .logo {
- 	font-size: 20px;
-  	font-family: 'Pacifico', cursive;
+header, footer {
+	background-color: #87C50D;	
+	height: 50px;
+}
 
- }
+header {
+	margin-bottom: 15px;
+}
+
+footer {
+	position: absolute;
+}
+
+.logo {
+	color: #fff;
+	float: left;
+	font-family: 'Pacifico', cursive;
+	font-size: 48px;
+}
+
+nav ul {
+	padding-top: 17px;
+}
+
+nav ul li {
+	display: inline;
+	font-size: 16px;
+	margin-left: 20px;
+}
+
+nav a {
+	color: #0260e4;
+}
+
+nav a:hover {
+	color: #fff;
+}
+
+/*
+=colors: gray: #f5f6f6;, blue: #0260e4;, black: #0e0e0e; pink: #fff4ed;
+*/
