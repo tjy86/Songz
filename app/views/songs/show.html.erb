@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Song Name:</b>
+  <%= @song.name %>
+</p>
+
+<p>
+  <b>Song Photo:</b>
+  <%= image_tag @song.photo %> <!-- image tag will make the image show up -->
+</p>
+
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', song_path %>
