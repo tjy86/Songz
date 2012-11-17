@@ -8,7 +8,6 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>
 
 
   <div class="field">
@@ -24,7 +23,7 @@
     <%= image_tag(@artist.photo_url) if @artist.photo? %>
 
   <div class='field'>
-    <% Artist.all.each do |album| %>
+    <% Album.all.each do |album| %>
       <%= check_box_tag 'artist[album_ids][]', album.id, album.in?(@artist.albums.to_a) %>
       <span><%= album.name %></span>
     <% end %>
