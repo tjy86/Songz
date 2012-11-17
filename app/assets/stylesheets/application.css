@@ -24,6 +24,7 @@ header{
 footer {
 	background-color: #87C50D;
 	bottom: 0;
+	padding: 10px;
 	position: fixed;
 	width: 100%;
 }
@@ -53,6 +54,15 @@ nav a:hover {
 =colors: gray: #f5f6f6;, blue: #0260e4;, black: #0e0e0e; pink: #fff4ed;
 */
 
+/*
+=input styles
+*/
+
+input:focus {
+	background: #87C50D;
+	color: #fff;
+}
+
 
 /*
 =show pages
@@ -61,6 +71,7 @@ nav a:hover {
 .name-box {
 	display: block;
 	font-size: 40px;
+	font-weight: bold;
 	padding-bottom: 10px;
 }
 
