@@ -58,7 +58,7 @@ nav a:hover {
 =input styles
 */
 
-input:focus {
+input:focus, input:hover {
 	background: #87C50D;
 	color: #fff;
 }
@@ -80,4 +80,18 @@ input:focus {
 	height: 300px;
 	padding-bottom: 20px;
 	width: 500px;
+}
+
+/*
+=index pages
+*/
+
+.index-box {
+	float: left;
+}
+
+.index-image img {
+	display: block;
+	height: 100px;
+	width: 100px;
 }
