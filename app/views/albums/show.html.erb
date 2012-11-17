@@ -2,7 +2,7 @@
 
 <div class="show">
 	<span class="name-box">
-		Album Name
+		Album:
 		<%= @album.name %>
 	</span>
 	<span class="photo-box">
@@ -10,5 +10,5 @@
 	  <%= image_tag @album.photo, :class => "photo" %>
   </span>
 <%= link_to 'Edit', edit_album_path(@album), :class => "button" %>
-<%= link_to 'Back', album_path, :class => "button" %>
+<%= link_to 'Back', albums_path, :class => "button" %>
 </div>

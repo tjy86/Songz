@@ -3,7 +3,7 @@
 
 <div class="show">
 	<span class='name-box'>
-		Song Name:
+		Song:
 	  <%= @song.name %>
 	</span>
 	<span class='photo-box'>
@@ -12,5 +12,5 @@
 	</span>
 
 <%= link_to 'Edit', edit_song_path(@song), :class => 'button' %> |
-<%= link_to 'Back', song_path, :class => 'button'  %>
+<%= link_to 'Back', songs_path, :class => 'button'  %>
 </div>
