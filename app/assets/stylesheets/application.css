@@ -86,6 +86,10 @@ input:focus, input:hover {
 =index pages
 */
 
+.index-box {
+	float: left;
+}
+
 .index-image img {
 	display: block;
 	height: 100px;
