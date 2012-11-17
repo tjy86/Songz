@@ -1,4 +1,10 @@
 Songz::Application.routes.draw do
+
+root :to => 'home#index'
+resources :artists
+resources :albums
+resources :songs
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
