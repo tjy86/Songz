@@ -5,6 +5,7 @@
  */
 
 body {
+	color: #5D5E5C;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
@@ -16,9 +17,6 @@ a {
 header{
 	background-color: #87C50D;	
 	height: 50px;
-}
-
-header {
 	margin-bottom: 15px;
 }
 
@@ -30,7 +28,7 @@ footer {
 }
 
 .logo {
-	color: #fff;
+	color: #FBFCF7;
 	float: left;
 	font-family: 'Pacifico', cursive;
 	font-size: 48px;
@@ -57,3 +55,13 @@ nav a:hover {
 /*
 =colors: gray: #f5f6f6;, blue: #0260e4;, black: #0e0e0e; pink: #fff4ed;
 */
+
+
+/*
+=show pages
+*/
+
+.name-box {
+	display: block;
+	font-size: 40px;
+}
