@@ -4,9 +4,9 @@
 
   <% @albums.each do |album| %>
     <div class="index-box">
-      <span class="index-name"><%= album.name %></span>
+      <span class="index-name"><%= link_to album.name, album %></span>
       <span class="index-image"><%= image_tag album.photo, :class => 'photo' %></span>
-      <span class="buttons"><%= link_to 'Show', album, :class => 'button'%></span>
+      
       <span class="buttons"><%= link_to 'Edit', edit_album_path(album), :class => 'button' %></span>
       <span class="buttons"><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' },:class => 'button' %></span>
     </div>
