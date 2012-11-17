@@ -1,4 +1,6 @@
+
 <%= render :partial => 'shared/errors', :locals => {:object => @song} %>
+
 
 <%= form_for(@song, :html => {:multipart => true}) do |f| %>
 
@@ -10,6 +12,13 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :album_id %>
+    <%= f.select :album_id, Album.all.map{|r| [r.name, r.id]} %>
+  </div>
+  <br>
+
+  <br>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
