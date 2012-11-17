@@ -13,7 +13,7 @@ a {
 	text-decoration: none;
 }
 
-header, footer {
+header{
 	background-color: #87C50D;	
 	height: 50px;
 }
@@ -23,7 +23,10 @@ header {
 }
 
 footer {
-	position: absolute;
+	background-color: #87C50D;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
 }
 
 .logo {
