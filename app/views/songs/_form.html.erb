@@ -9,28 +9,28 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>
-  <% end %>
+    
+  
 
   <div class="field">
     <%= f.label :album_id %>
     <%= f.select :album_id, Album.all.map{|r| [r.name, r.id]} %>
   </div>
   <br>
-
-  <br>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :photo %><br />
+    <%= f.label :photo %><br>
     <%= f.file_field :photo %>
     <%= f.hidden_field :photo_cache %>
     <%= label_tag "Add URL for photo" %>
     <%= image_tag(@song.photo_url) if @song.photo? %>
     <%= f.text_field :remote_photo_url %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
