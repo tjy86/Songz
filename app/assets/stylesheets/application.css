@@ -11,6 +11,7 @@ body {
 }
 
 a {
+	color: #0260e4;
 	text-decoration: none;
 }
 
@@ -44,10 +45,6 @@ nav ul li {
 	margin-left: 20px;
 }
 
-nav a {
-	color: #0260e4;
-}
-
 nav a:hover {
 	color: #fff;
 }
@@ -64,4 +61,12 @@ nav a:hover {
 .name-box {
 	display: block;
 	font-size: 40px;
+	padding-bottom: 10px;
+}
+
+.photo-box img {
+	display: block;
+	height: 300px;
+	padding-bottom: 20px;
+	width: 500px;
 }
