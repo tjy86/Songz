@@ -19,7 +19,5 @@ class AddAllTables < ActiveRecord::Migration
   		t.string :photo
   		t.timestamps
   	end
-
-
   end
 end
