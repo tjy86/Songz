@@ -4,15 +4,69 @@
  *= require_self
  */
 
+body {
+	color: #5D5E5C;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
 
- header {
- 	background-color: #87C50D;
- 	text-decoration: none;
- 	height: 50px;
- }
+a {
+	color: #0260e4;
+	text-decoration: none;
+}
 
- .logo {
- 	font-size: 20px;
-  	font-family: 'Pacifico', cursive;
+header{
+	background-color: #87C50D;	
+	height: 50px;
+	margin-bottom: 15px;
+}
 
- }
+footer {
+	background-color: #87C50D;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+}
+
+.logo {
+	color: #FBFCF7;
+	float: left;
+	font-family: 'Pacifico', cursive;
+	font-size: 48px;
+}
+
+nav ul {
+	padding-top: 17px;
+}
+
+nav ul li {
+	display: inline;
+	font-size: 16px;
+	margin-left: 20px;
+}
+
+nav a:hover {
+	color: #fff;
+}
+
+/*
+=colors: gray: #f5f6f6;, blue: #0260e4;, black: #0e0e0e; pink: #fff4ed;
+*/
+
+
+/*
+=show pages
+*/
+
+.name-box {
+	display: block;
+	font-size: 40px;
+	padding-bottom: 10px;
+}
+
+.photo-box img {
+	display: block;
+	height: 300px;
+	padding-bottom: 20px;
+	width: 500px;
+}

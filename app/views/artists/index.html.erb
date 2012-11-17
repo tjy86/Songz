@@ -1,25 +1,15 @@
-<h1>Listing Artists</h1>
+<h1>Artists Index</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Photo</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="index">
 
-<% @artists.each do |artist| %>
-  <tr>
-    <td><%= artist.name %></td>
-    <td><%= artist.photo %></td>
-    <td><%= link_to 'Show', artist %></td>
-    <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-    <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Artist', new_artist_path %>
+  <% @artists.each do |artist| %>
+    <div class="index-box">
+      <span class="index-name"><%= link_to artist.name, artist %></span>
+      <span class="index-image"><%= image_tag artist.photo, :class => 'photo' %></span>
+      
+      <span class="buttons"><%= link_to 'Edit', edit_artist_path(artist), :class => 'button' %></span>
+      <span class="buttons"><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' },:class => 'button' %></span>
+    </div>
+  <% end %>
+  <%= link_to 'New Artist', new_artist_path %>
+</div>

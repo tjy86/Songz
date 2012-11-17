@@ -74,6 +74,10 @@ GEM
       net-ssh (>= 1.99.1)
     net-ssh (2.6.1)
     nokogiri (1.5.5)
+<<<<<<< HEAD
+=======
+    nokogiri (1.5.5-x86-mingw32)
+>>>>>>> d24ab28108733769489b043b4497c6365fd8854f
     pg (0.14.1)
     pg (0.14.1-x86-mingw32)
     polyglot (0.3.3)

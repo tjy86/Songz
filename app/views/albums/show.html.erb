@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Album Name:</b>
-  <%= @album.name %>
-</p>
-
-<p>
-  <b>Album Photo:</b>
-  <%= image_tag @album.photo %> <!-- image tag will make the image show up -->
-</p>
-
-
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', album_path %>
+<div class="show">
+	<span class="name-box">
+		Album:
+		<%= @album.name %>
+	</span>
+	<span class="photo-box">
+	  Album Photo:
+	  <%= image_tag @album.photo, :class => "photo" %>
+  </span>
+<%= link_to 'Edit', edit_album_path(@album), :class => "button" %>
+<%= link_to 'Back', albums_path, :class => "button" %>
+</div>

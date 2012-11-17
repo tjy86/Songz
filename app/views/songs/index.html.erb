@@ -1,9 +1,15 @@
-<h2>List of Songs</h2>
-<ul>
-	<% @songs.each do |song| %>
-	<li>
-		<p><%= link_to song.name, song %></p>
-	</li>
-	<% end %>
-</ul>
+<h1>Songs Index</h1>
 
+<div class="index">
+
+  <% @songs.each do |song| %>
+    <div class="index-box">
+      <span class="index-name"><%= link_to song.name, song %></span>
+      <span class="index-image"><%= image_tag song.photo, :class => 'photo' %></span>
+      
+      <span class="buttons"><%= link_to 'Edit', edit_song_path(song), :class => 'button' %></span>
+      <span class="buttons"><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' },:class => 'button' %></span>
+    </div>
+  <% end %>
+  <%= link_to 'New Song', new_song_path %>
+</div>
