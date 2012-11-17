@@ -1,4 +1,5 @@
 /*
+ *= require 'home'
  *= require 'reset'
  *= require '960_12_col'
  *= require_self

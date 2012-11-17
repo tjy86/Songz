@@ -6,6 +6,10 @@ class SongsController < ApplicationController
 	def show
 		song_id = params[:id]
 		@song = Song.find(song_id)
+		album_id= @song.album_id
+		@album = Album.find(album_id)
+		artist_id = @album.artist_id
+		@artist = Artist.find(artist_id)
 	end
 
 	def new
