@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Song Name:</b>
-  <%= @song.name %>
-</p>
 
-<p>
-  <b>Song Photo:</b>
-  <%= image_tag @song.photo %> <!-- image tag will make the image show up -->
-</p>
+<div class="show">
+	<span class='name-box'>
+		Song Name:
+	  <%= @song.name %>
+	</span>
+	<span class='photo-box'>
+	  Song Photo:
+	  <%= image_tag @song.photo, :class => 'photo' %> 
+	</span>
 
-
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', song_path %>
+<%= link_to 'Edit', edit_song_path(@song), :class => 'button' %> |
+<%= link_to 'Back', song_path, :class => 'button'  %>
+</div>
