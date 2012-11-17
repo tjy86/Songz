@@ -14,4 +14,5 @@ class Song < ActiveRecord::Base
 	belongs_to :album
 
 	validates :name, :photo, :presence => true
+	mount_uploader :photo, MusicUploader
 end

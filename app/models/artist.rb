@@ -14,4 +14,5 @@ class Artist < ActiveRecord::Base
 	has_many :songs, :through => :artists
 
 	validates :name, :photo, :presence => true
+	mount_uploader :photo, MusicUploader
 end
