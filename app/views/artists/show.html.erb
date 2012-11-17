@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Artist:</b>
-  <%= @artist.name %>
-</p>
-
-<p>
-  <b>Photo:</b>
-  <%= image_tag @artist.photo %>
-</p>
-
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+<div class="show">
+  	<span class="name-box">
+  	Artist:
+  	<%= @artist.name %>
+	</span>
+	<span class="photo-box">
+	Photo:
+	<%= image_tag @artist.photo , :class => "photo" %>
+	</span>
+<%= link_to 'Edit', edit_artist_path(@artist),:class => "button" %>
+<%= link_to 'Back', artists_path, :class => "button" %>
+</div>
