@@ -8,7 +8,6 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
 
   <div class="field">
     <%= f.label :name %><br />
@@ -24,7 +23,7 @@
   </div>
 
   <div class='field'>
-    <% Album.all.each do |album| %>
+    <% Album.all.each do |song| %>
       <%= check_box_tag 'album[song_ids][]', song.id, song.in?(@album.songs.to_a) %>
       <span><%= song.name %></span>
     <% end %>
