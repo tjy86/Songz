@@ -9,7 +9,7 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+
 
   <div class="field">
     <%= f.label :name %><br />
@@ -24,13 +24,13 @@
     <%= image_tag(@artist.photo_url) if @artist.photo? %>
 
   <div class='field'>
-    <% Artist.all.each do |artist| %>
+    <% Artist.all.each do |album| %>
       <%= check_box_tag 'artist[album_ids][]', album.id, album.in?(@artist.albums.to_a) %>
-      <span><%= song.name %></span>
+      <span><%= album.name %></span>
     <% end %>
   </div>
 
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
