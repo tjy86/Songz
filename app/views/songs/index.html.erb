@@ -1,27 +1,15 @@
-<h2>Songs Index</h2>
+<h1>Songs Index</h1>
 
 <div class="index">
-	
-	<ul>
-		<% @songs.each do |song| %>
-			<li><%= link_to song.name, song %></li>
-		<% end %>
-	</ul>
+
+  <% @songs.each do |song| %>
+    <div class="index-box">
+      <span class="index-name"><%= song.name %></span>
+      <span class="index-image"><%= image_tag song.photo, :class => 'photo' %></span>
+      <span class="buttons"><%= link_to 'Show', song, :class => 'button'%></span>
+      <span class="buttons"><%= link_to 'Edit', edit_song_path(song), :class => 'button' %></span>
+      <span class="buttons"><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' },:class => 'button' %></span>
+    </div>
+  <% end %>
+  <%= link_to 'New Song', new_song_path %>
 </div>
-
-
-
-<h1>Artists Index</h1>
-
-<div class="index">
-
-<% @artists.each do |artist| %>
-  <div class="index-box">
-    <span class="index-name"><%= artist.name %></span>
-    <span class="index-image"><%= image_tag artist.photo, :class => 'photo' %></span>
-    <span class="buttons"><%= link_to 'Show', artist, :class => 'button'%></span>
-    <span class="buttons"><%= link_to 'Edit', edit_artist_path(artist), :class => 'button' %></span>
-    <span class="buttons"><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' },:class => 'button' %></span>
-  </div>
-<% end %>
-<%= link_to 'New Artist', new_artist_path %>
