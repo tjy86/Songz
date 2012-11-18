@@ -10,6 +10,11 @@ class SongsController < ApplicationController
 		@album = Album.find(album_id)
 		artist_id = @album.artist_id
 		@artist = Artist.find(artist_id)
+		begin
+			url = "http://lyrics.wikia.com/api.php?artist=#{@artist.name}&song=#{@song.name}&fmt=text".gsub(' ','%20')
+			@lyric = HTTParty.get(url)
+		rescue
+		end
 	end
 
 	def new

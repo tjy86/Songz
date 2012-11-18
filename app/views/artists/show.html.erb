@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<div class="show">
-  	<span class="name-box">
+<div class="show-left">
+	<span class="name-box">
   	Artist:
   	<%= @artist.name %>
 	</span>
@@ -9,13 +9,18 @@
 	Photo:
 	<%= image_tag @artist.photo %>
 	</span>
-
-<div class='meta'>
-    <% @artist.albums.each do |album| %>
-    <%= album.name %>
-    <% end %>
 </div>
-
+<div class="show-right">
+  <p>Albums</p>
+  <ul>
+    <div class='meta'>
+        <% @artist.albums.each do |album| %>
+        <li><%= link_to album.name, album %></li>
+        <% end %>
+    </div>
+  </ul>
+</div>
+<div class="clear"></div>
 <%= link_to 'Edit', edit_artist_path(@artist),:class => "button" %>
 <%= link_to 'Back', artists_path, :class => "button" %>
 </div>
