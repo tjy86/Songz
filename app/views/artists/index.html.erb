@@ -5,10 +5,13 @@
   <% @artists.each do |artist| %>
     <div class="index-box">
       <span class="index-name"><%= link_to artist.name, artist %></span>
+      <span class="buttons">
+      	<%= link_to "Details", artist %>
+      	<%= link_to 'Edit', edit_artist_path(artist), :class => 'button' %>
+      	<%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' },:class => 'button' %>
+      </span>
       <span class="index-image"><%= image_tag artist.photo, :class => 'photo' %></span>
       
-      <span class="buttons"><%= link_to 'Edit', edit_artist_path(artist), :class => 'button' %></span>
-      <span class="buttons"><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' },:class => 'button' %></span>
     </div>
   <% end %>
 </div>
