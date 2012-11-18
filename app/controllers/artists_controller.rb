@@ -36,8 +36,8 @@ class ArtistsController < ApplicationController
 
   def destroy
     artist = Artist.find(params[:id])
-    Artist.delete
-    redirect_to Artists_path
+    Artist.delete(artist)
+    redirect_to artists_path
   end
 
 end

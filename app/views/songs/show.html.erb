@@ -1,20 +1,16 @@
-<span class='name'>
-	<%= @song.name %>
-</span>
+<div class='name'>
+	<%= @song.name %> <%= link_to 'Edit', edit_song_path(@song), :class => 'edit' %>
+</div>
 <div class="main-details grid_8">
 <span class="subname">
 	Artist:
 	<%= link_to @artist.name, @artist %>
-	/
 	Album:
 	<%= link_to @album.name, @album %>
 </span>
 	<%= image_tag @song.photo, :class => 'photo' %> 
 </div><!--.main-details-->
-<div class="show-right">
-	<p>Lyrics</p>
+<div class="meta">
+	<h4>Lyrics</h4>
 	<%= @lyric %>
 </div>
-<div class="clear"></div>
-<%= link_to 'Edit', edit_song_path(@song), :class => 'button' %>
-<%= link_to 'Back', songs_path, :class => 'button'  %>

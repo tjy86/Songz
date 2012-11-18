@@ -1,17 +1,14 @@
-<span class="name">
-	<%= @artist.name %>
-</span>
+<div class="name">
+	<%= @artist.name %> <%= link_to 'Edit', edit_artist_path(@artist),:class => "edit" %>
+</div>
 <div class="main-details grid_8">
-	<%= image_tag @artist.photo %>
+	<%= image_tag @artist.photo %> 
 </div> <!--.main-details-->
 <div class='meta grid_4'>
-  <p>Albums</p>
+  <h4>Albums</h4>
   <ul>
         <% @artist.albums.each do |album| %>
         <li><%= link_to album.name, album %></li>
         <% end %>
   </ul>
 </div><!--.grid_4-->
-<div class="clear"></div>
-<%= link_to 'Edit', edit_artist_path(@artist),:class => "button" %>
-<%= link_to 'Back', artists_path, :class => "button" %>
