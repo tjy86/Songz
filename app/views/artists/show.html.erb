@@ -1,26 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<div class="show-left">
-	<span class="name-box">
-  	Artist:
-  	<%= @artist.name %>
-	</span>
-	<span class="photo-box">
-	Photo:
+<span class="name">
+	<%= @artist.name %>
+</span>
+<div class="main-details grid_8">
 	<%= image_tag @artist.photo %>
-	</span>
-</div>
-<div class="show-right">
+</div> <!--.main-details-->
+<div class='meta grid_4'>
   <p>Albums</p>
   <ul>
-    <div class='meta'>
         <% @artist.albums.each do |album| %>
         <li><%= link_to album.name, album %></li>
         <% end %>
-    </div>
   </ul>
-</div>
+</div><!--.grid_4-->
 <div class="clear"></div>
 <%= link_to 'Edit', edit_artist_path(@artist),:class => "button" %>
 <%= link_to 'Back', artists_path, :class => "button" %>
-</div>

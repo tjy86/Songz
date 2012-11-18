@@ -1,35 +1,32 @@
-
 <%= render :partial => 'shared/errors', :locals => {:object => @artist} %>
 
-<%= form_for(@artist, :html => {:multipart => true}) do |f| %> <! --tells html form that there will be files included here-->
-
-      <ul>
-      <% @artist.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-
-
-  <div class="field">
-    <%= f.label :name %><br />
+<%= form_for(@artist, :html => {:multipart => true}) do |f| %> <!--tells html form that there will be files included here-->
+  <ul>
+    <% @artist.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <div class="field grid_12">
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :photo %><br />
+  <div class="field grid_12">
+    <%= image_tag(@artist.photo_url) if @artist.photo? %>
+    <%= f.label :photo %>
     <%= f.file_field :photo %>
     <%= f.hidden_field :photo_cache %>
     <%= label_tag "Add URL for photo" %>
     <%= f.text_field :remote_photo_url %>
-    <%= image_tag(@artist.photo_url) if @artist.photo? %>
-
-  <div class='field'>
-    <% Album.all.each do |album| %>
-      <%= check_box_tag 'artist[album_ids][]', album.id, album.in?(@artist.albums.to_a) %>
-      <span><%= album.name %></span>
-    <% end %>
   </div>
-
-
+  <div class="field grid_12">
+    <h4>Albums:</h4>
+    <% Album.all.each do |album| %>
+    <span class="check-boxes">
+      <%= check_box_tag 'artist[album_ids][]', album.id, album.in?(@artist.albums.to_a) %>
+      <%= album.name %>
+    </span>
+      <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -29,6 +29,7 @@ header{
 footer {
 	background-color: #87C50D;
 	bottom: 0;
+	margin-top: 20px;
 	padding: 10px;
 	position: fixed;
 	width: 100%;
@@ -73,41 +74,29 @@ input[type="text"]:focus, input[type="text"]:hover {
 =show pages
 */
 
-.name-box {
+.name {
 	display: block;
 	font-size: 40px;
 	font-weight: bold;
-	padding-bottom: 10px;
+	padding: 0 0 10px 10px;
 }
 
-.subname-box{
+.subname{
 	display: block;
 	padding-bottom: 6px;
 }
 
-.photo-box img {
+.main-details img {
 	display: block;
 	height: 300px;
 	padding-bottom: 20px;
 	width: 500px;
 }
 
-.show-right{
-	width: 30%;
-	float:left;
-	padding-top: 70px;
-	padding-left: 50px;
-}
-
-.show-left{
-	width: 50%;
-	float:left;
-}
-
-.show-right p{
+.meta p{
 	font-size: 20px;
-	text-decoration: underline;
 	line-height: 50px;
+	text-decoration: underline;
 }
 
 .show-right li{
@@ -121,20 +110,26 @@ input[type="text"]:focus, input[type="text"]:hover {
 
 .index-box {
 	float: left;
-	margin: 10px;
+	margin: 3px 0;
+	padding: 7px 0;
+}
+
+.index-box:nth-of-type(2n){
+	background: #FAFDFF;
 }
 
 .buttons {
 	font-size: 10px;
 }
 
-.index-name a {
+.index_name a {
 	color: #5D5E5C;
 	display: block;
 	font-size: 20px;
+	margin-bottom: 3px;
 }
 
-.index-image img {
+.index img {
 	display: block;
 	height: 100px;
 	width: 100px;
@@ -142,4 +137,24 @@ input[type="text"]:focus, input[type="text"]:hover {
 
 .clear{
 	clear: both;
+}
+
+/*
+=form styles
+*/
+
+.field {
+	margin: 15px 0;
+}
+
+.field img {
+	display: block;
+	height: 20%;
+	max-height: 200px;
+	width: 20%;
+	max-width: 200px;
+}
+
+.check-boxes{
+	display: block;
 }

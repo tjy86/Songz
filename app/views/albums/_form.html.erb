@@ -2,29 +2,32 @@
 
 <%= form_for(@album, :html => {:multipart => true}) do |f| %>
 
-      <ul>
-      <% @album.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <ul>
+  <% @album.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
 
-  <div class="field">
-    <%= f.label :name %><br />
+  <div class="field grid_12">
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :photo %><br />
+  <div class="field grid_12">
+    <%= image_tag(@album.photo_url) if @album.photo? %>
+    <%= f.label :photo %>
     <%= f.file_field :photo %>
     <%= f.hidden_field :photo_cache %>
-     <%= label_tag "Add URL for photo" %>
-    <%= image_tag(@album.photo_url) if @album.photo? %>
+    <%= label_tag "Add URL for photo" %>
     <%= f.text_field :remote_photo_url %>
   </div>
 
-  <div class='field'>
+  <div class="field grid_12">
+    <h4>Songs:</h4>
     <% Song.all.each do |song| %>
-      <%= check_box_tag 'album[song_ids][]', song.id, song.in?(@album.songs.to_a) %>
-      <span><%= song.name %></span>
+      <span class="check-boxes">
+        <%= check_box_tag 'album[song_ids][]', song.id, song.in?(@album.songs.to_a) %>
+        <%= song.name %>
+      </span>
     <% end %>
   </div>
 

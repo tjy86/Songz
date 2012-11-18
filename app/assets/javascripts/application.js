@@ -15,14 +15,14 @@
 //= require_tree .
 
 $(function() {
-	$('.buttons').css("visibility","hidden");
-	$('.index-name').click(showDetails);
+	// $('.buttons').css("visibility","hidden");
+	// $('.index-name').click(showDetails);
 
-	function showDetails (e) {
-		console.log(this);
-		e.preventDefault();
-		var buttons = $(this).siblings('.buttons');
-		console.log(buttons);
-		$(buttons).css("visibility","visible");
-	}
+	// function showDetails (e) {
+	// 	console.log(this);
+	// 	e.preventDefault();
+	// 	var buttons = $(this).siblings('.buttons');
+	// 	console.log(buttons);
+	// 	$(buttons).css("visibility","visible");
+	// }
 });

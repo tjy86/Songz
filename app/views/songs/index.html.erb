@@ -1,17 +1,14 @@
 <h1>Songs</h1>
 
 <div class="index">
-
-  <% @songs.each do |song| %>
-    <div class="index-box">
-      <span class="index-name"><%= link_to song.name, song %></span>
-      <span class="buttons">
-      	<%= link_to 'Details', song %>
-      	<%= link_to 'Edit', edit_song_path(song), :class => 'button' %>
-      	<%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' },:class => 'button' %>
-      </span>
-      <span class="index-image"><%= image_tag song.photo, :class => 'photo' %></span>
-      
-    </div>
+<% @songs.each do |song| %>
+    <div class="index-box grid_12">
+      <div class="grid_2"><%= image_tag song.photo %></div>
+      <div class="buttons grid_10">
+      <span class="index_name"><%= link_to song.name, song %></span>
+      	<%= link_to 'Edit', edit_song_path(song) %>
+      	<%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>  
+    </div><!--.index-box-->
   <% end %>
 </div>

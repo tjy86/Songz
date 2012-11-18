@@ -1,16 +1,14 @@
 <h1>Albums</h1>
 
 <div class="index">
-
-  <% @albums.each do |album| %>
-    <div class="index-box">
-      <span class="index-name"><%= link_to album.name, album %></span>
-      <span class="buttons">
-      	<%= link_to "Details", album %>
-      	<%= link_to 'Edit', edit_album_path(album), :class => 'button' %>
-      	<%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' },:class => 'button' %>
-      </span>
-      <span class="index-image"><%= image_tag album.photo, :class => 'photo' %></span>
+<% @albums.each do |album| %>
+    <div class="index-box grid_12">
+    <span class="grid_2"><%= image_tag album.photo, :class => 'photo' %></span>
+    <div class="buttons grid_10">
+	    <span class="index_name"><%= link_to album.name, album %></span>
+	  	<%= link_to 'Edit', edit_album_path(album)%>
+	   	<%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }%>
+      </div><!--.buttons-->
       
     </div>
   <% end %>
