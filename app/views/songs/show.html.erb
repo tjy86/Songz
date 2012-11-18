@@ -1,23 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<div class="show">
-	<span class='name-box'>
-		Song:
-	  <%= @song.name %>
-	</span>
-	<span class="subname-box">
-		Album:
-		<%= @album.name %>
-	</span>
-	<span class="subname-box">
-		Artist:
-		<%= @artist.name %>
-	</span>
-	<span class='photo-box'>
-	  Song Photo:
-	  <%= image_tag @song.photo, :class => 'photo' %> 
-	</span>
-<div class="clear"></div>
-<%= link_to 'Edit', edit_song_path(@song), :class => 'button' %> |
-<%= link_to 'Back', songs_path, :class => 'button'  %>
-</div>
+
+	<div class="show-left">
+		<span class='name-box'>
+			Song:
+		  <%= @song.name %>
+		</span>
+		<span class="subname-box">
+			Artist:
+			<%= link_to @artist.name, @artist %>
+			/
+			Album:
+			<%= link_to @album.name, @album %>
+		</span>
+		<span class='photo-box'>
+		  Song Photo:
+		  <%= image_tag @song.photo, :class => 'photo' %> 
+		</span>
+	</div>
+	<div class="show-right">
+		<p>Lyrics</p>
+		<%= @lyric %>
+	</div>
+	<div class="clear"></div>
+	<%= link_to 'Edit', edit_song_path(@song), :class => 'button' %> |
+	<%= link_to 'Back', songs_path, :class => 'button'  %>

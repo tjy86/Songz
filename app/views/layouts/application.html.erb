@@ -12,15 +12,14 @@
 
 	<header>
 		<nav class="container_12">
-			<h2 class="logo">Beat Hypem</h1>
+			<%= link_to "Beat Hypem", root_path, :class => 'logo' %>
 			<ul>
-				<li><%= link_to "Home", root_path %></li>
+    		<li><%= link_to "Artists", artists_path %></li>
+    		<li><%= link_to "New Artist", new_artist_path %></li>  
 				<li><%= link_to "Albums", albums_path %></li>
-	      		<li><%= link_to "New Album", new_album_path %></li>
-	      		<li><%= link_to "Artists", artists_path %></li>
-	      		<li><%= link_to "New Artist", new_artist_path %></li>  
+    		<li><%= link_to "New Album", new_album_path %></li>
 				<li><%= link_to "Songs", songs_path %></li>
-	      		<li><%= link_to "New Song", new_song_path %></li>
+    		<li><%= link_to "New Song", new_song_path %></li>
 			</ul>
     	</nav>
 	</header>
@@ -32,7 +31,7 @@
 	</div> 
 	<footer>
 		<div class="container_12">
-			<p>&copy; 2012 Beat Hypem Corp :: Dustin - Marc - Jon - Thomas </p>
+			<p>&copy; 2012 Beat Hypem Corp :: Dustin - Marc - Jon - Thomas (yang the man!) </p>
 		</div>
 	</footer>
 

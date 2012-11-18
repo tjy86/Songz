@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="show-left">
-  	<span class="name-box">
+	<span class="name-box">
   	Artist:
   	<%= @artist.name %>
 	</span>
@@ -15,7 +15,7 @@
   <ul>
     <div class='meta'>
         <% @artist.albums.each do |album| %>
-        <li><%= link_to album.name, album_path %></li>
+        <li><%= link_to album.name, album %></li>
         <% end %>
     </div>
   </ul>
