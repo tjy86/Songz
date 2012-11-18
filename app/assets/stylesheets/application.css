@@ -80,11 +80,37 @@ input[type="text"]:focus, input[type="text"]:hover {
 	padding-bottom: 10px;
 }
 
+.subname-box{
+	display: block;
+	padding-bottom: 6px;
+}
+
 .photo-box img {
 	display: block;
 	height: 300px;
 	padding-bottom: 20px;
 	width: 500px;
+}
+
+.show-right{
+	float:left;
+	padding-top: 70px;
+	padding-left: 50px;
+}
+
+.show-left{
+	float:left;
+}
+
+.show-right p{
+	font-size: 20px;
+	text-decoration: underline;
+	line-height: 50px;
+}
+
+.show-right li{
+	list-style-type: square;
+	line-height: 20px;
 }
 
 /*
@@ -105,4 +131,8 @@ input[type="text"]:focus, input[type="text"]:hover {
 	display: block;
 	height: 100px;
 	width: 100px;
+}
+
+.clear{
+	clear: both;
 }
