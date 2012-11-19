@@ -1,3 +1,3 @@
 <p class="intro grid_12">
-	Songz: We have more songs than you. Now with <%= link_to "#{Artist.count} artists", artists_path %>, <%= link_to "#{Album.count} albums", albums_path %>, and <%= link_to "#{Song.count} songs", songs_path %>.
+	Songz: We have more songs than you. Now with <%= link_to pluralize(Artist.count, "artists"), artists_path %>, <%= link_to pluralize(Album.count, "albums"), albums_path %>, and <%= link_to pluralize(Song.count, "songs"), songs_path %>.
 </p>
