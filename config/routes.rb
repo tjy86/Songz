@@ -6,6 +6,7 @@ Songz::Application.routes.draw do
   resources :albums
   resources :artists
   match '/artists/add-all/:id' => 'artists#add_all', :via => :post, :as => :add_all
+  match '/albums/add-all/:id' => 'albums#add_all', :via => :post, :as => :add_all_songs
   root :to => 'home#index'
 
 
