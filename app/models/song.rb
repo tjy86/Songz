@@ -11,9 +11,13 @@
 #
 
 class Song < ActiveRecord::Base
-	belongs_to :album
+	has_and_belongs_to_many :albums
+	has_and_belongs_to_many :artists
+	has_and_belongs_to_many :genres
 
 	validates :name, :photo, :presence => true
 	validates :name, :uniqueness => true
 	mount_uploader :photo, MusicUploader
+	mount_uploader :mp3, Mp3Uploader
 end
+
