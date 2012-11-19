@@ -1,5 +1,5 @@
 <%= render :partial => 'shared/errors', :locals => {:object => @artist} %>
-
+<%binding.pry %>
 <%= form_for(@artist, :html => {:multipart => true}) do |f| %> <!--tells html form that there will be files included here-->
   <ul>
     <% @artist.errors.full_messages.each do |msg| %>
