@@ -12,7 +12,7 @@ gem 'rails-footnotes'
 gem 'annotate'
 gem 'carrierwave'
 gem 'httparty'
-gem 'rmagick'
+# gem 'rmagick'
 
 # Gems used only for assets and not required
 # in production environments by default.
