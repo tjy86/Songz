@@ -6,7 +6,6 @@ class MusicUploader < CarrierWave::Uploader::Base
    include CarrierWave::RMagick
   #include CarrierWave::MiniMagick
 
-
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
   # include Sprockets::Helpers::RailsHelper
   # include Sprockets::Helpers::IsolatedHelper
@@ -37,9 +36,9 @@ class MusicUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :thumb do
-    process :resize_to_fill => [150, 150]
-  end
+  # version :thumb do
+  #   process :resize_to_fill => [150, 150]
+  # end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

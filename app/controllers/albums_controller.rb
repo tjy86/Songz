@@ -6,6 +6,9 @@ class AlbumsController < ApplicationController
 	def show
 		album_id = params[:id]
 		@album = Album.find(album_id)
+		if @album.songs[0]
+			@album_artist = @album.songs[0].artists[0]
+		end
 	end
 
 	def new

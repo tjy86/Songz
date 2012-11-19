@@ -3,7 +3,7 @@
 <div class="index">
 <% @albums.each do |album| %>
     <div class="index-box grid_3">
-    <%= image_tag album.photo.thumb, :class => 'photo' %>
+    <%= image_tag album.photo, :class => 'photo' %>
     <div class="buttons">
 	    <span class="index_name"><%= link_to album.name, album %></span>
 	  	<%= link_to 'Edit', edit_album_path(album)%>

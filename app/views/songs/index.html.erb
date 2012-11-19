@@ -3,7 +3,7 @@
 <div class="index">
 <% @songs.each do |song| %>
     <div class="index-box grid_3">
-      <%= image_tag song.photo.thumb %>
+      <%= image_tag song.photo %>
       <div class="buttons">
       <span class="index_name"><%= link_to song.name, song %></span>
       	<%= link_to 'Edit', edit_song_path(song) %>

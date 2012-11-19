@@ -18,15 +18,6 @@
     <%= label_tag "Add URL for photo" %>
     <%= f.text_field :remote_photo_url %>
   </div>
-  <div class="field grid_12">
-    <h4>Albums:</h4>
-    <% Album.all.each do |album| %>
-    <span class="check-boxes">
-      <%= check_box_tag 'artist[album_ids][]', album.id, album.in?(@artist.albums.to_a) %>
-      <%= album.name %>
-    </span>
-      <% end %>
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
