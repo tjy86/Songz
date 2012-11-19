@@ -12,7 +12,7 @@ class SongsController < ApplicationController
 		@artist = Artist.find(artist_id)
 		begin
 			url = "http://lyrics.wikia.com/api.php?artist=#{@artist.name}&song=#{@song.name}&fmt=text".gsub(' ','%20')
-			@lyric = HTTParty.get(url).gsub('\n','<br>')
+			@lyric = HTTParty.get(url)
 		rescue
 		end
 	end

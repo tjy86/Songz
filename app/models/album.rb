@@ -15,5 +15,6 @@ class Album < ActiveRecord::Base
 	belongs_to :artist
 
 	validates :name, :photo, :presence => true
+	validates :name, :uniqueness => true
 	mount_uploader :photo, MusicUploader
 end
