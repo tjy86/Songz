@@ -18,10 +18,17 @@
     <%= label_tag "Add URL for photo" %>
     <%= f.text_field :remote_photo_url %>
   </div>
+
   <div class="field grid_12">
-    <%= f.label :album_id %>
-    <%= f.select :album_id, Album.all.map{|r| [r.name, r.id]} %>
+    <%= f.label :song %>
+    <%= f.file_field :song %>
   </div>
+
+  <div class="field grid_12">
+    <%= f.label :youtube %>
+    <%= f.text_field :youtube %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
