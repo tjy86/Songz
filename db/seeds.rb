@@ -1,3 +1,5 @@
+
+
 artist1 = Artist.create(:name => 'Radiohead', :remote_photo_url => 'http://images.jambase.com/merch/Radiohead%20-%20Best%20Of.jpg')
 
 albums_return = HTTParty.get("http://ws.spotify.com/search/1/album.json?q=radiohead")
@@ -17,5 +19,4 @@ albums.each do |album|
 		album1.songs << Song.create(:name => track["name"], :remote_photo_url => album_image)
 	end
 
-	artist1.albums << album1
 end
