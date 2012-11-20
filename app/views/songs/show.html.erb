@@ -9,6 +9,14 @@
 	<%= link_to @album.name, @album %>
 </span>
 	<%= image_tag @song.photo %> 
+
+
+  <b>Audio:</b>
+  <%= audio_tag @song.mp3, :controls => true %>
+
+  <b>Youtube:</b>
+  <%= render :partial => 'shared/youtube', :locals => {:youtube => @song.youtube } %>
+
 </div><!--.main-details-->
 <div class="meta">
 	<h4>Lyrics</h4>
