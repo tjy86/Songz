@@ -1,0 +1,182 @@
+$green-color: #87C50D;
+$gray-color: #f5f6f6;
+$blue-color: #0260e4;
+$pink-color: #fff4ed;
+
+body {
+	color: #5D5E5C;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+a {
+	color: $blue-color;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 18px;
+}
+
+header{
+	background-color: $green-color;	
+	height: 50px;
+	margin-bottom: 15px;
+}
+
+footer {
+	background-color: $green-color;
+	bottom: 0;
+	margin-top: 20px;
+	padding: 10px;
+	position: fixed;
+	width: 100%;
+}
+
+.logo {
+	color: #FBFCF7;
+	float: left;
+	font-family: 'Pacifico', cursive;
+	font-size: 48px;
+}
+
+nav {
+	ul{
+		padding-top: 17px;
+	}
+	ul li{
+		display: inline;
+		font-size: 16px;
+		margin-left: 20px;
+	}
+	a:hover{
+		color: #fff;
+	}
+}
+
+/*
+=home styles
+*/
+
+.intro {
+	font-size: 96px;
+	line-height: 106px;
+}
+
+.intro a{
+	border-bottom: 1px dotted #111;
+	color: $green-color;
+}
+
+/*
+=input styles
+*/
+
+input[type="text"]:focus, input[type="text"]:hover {
+	background: $green-color;
+	color: #fff;
+}
+
+/*
+=show pages
+*/
+
+.name {
+	font-size: 40px;
+	font-weight: bold;
+	padding: 0 0 10px 10px;
+}
+
+.subname{	
+	padding-bottom: 6px;
+	padding-left: 10px;
+}
+
+.edit {
+	font-size: 10px;
+}
+
+.edit:before {
+	content: "(";
+}
+
+.edit:after {
+	content: ")";
+}
+
+.main-details img {
+	height: 500px;
+	padding-bottom: 20px;
+	width: 500px;
+}
+
+.meta {
+	h4{
+		font-size: 20px;
+		line-height: 50px;
+		text-decoration: underline;
+	}
+	ul{
+		padding-left: 15px;
+	}
+	li{
+		list-style-type: square;
+		line-height: 20px;
+	}
+}
+
+/*
+=index pages
+*/
+
+.index-box {
+	border: 1px #fff solid;
+	float: left;
+	height: 150px;
+	margin: 3px 0;
+	overflow: hidden;
+	padding: 7px;
+}
+
+.index-box:hover {
+	border: 1px #ddd solid;
+}
+
+.buttons {
+	font-size: 10px;
+}
+
+.index_name a {
+	color: #5D5E5C;
+	font-size: 20px;
+	margin-bottom: 3px;
+}
+
+.index img {
+	height: 100px;
+	padding-right: 5px;
+	width: 100px;
+}
+
+.clear{
+	clear: both;
+}
+
+/*
+=form styles
+*/
+
+.field {
+	margin: 15px 0;
+}
+
+.field img {
+	height: 20%;
+	max-height: 200px;
+	width: 20%;
+	max-width: 200px;
+}
+
+.check-boxes, .field img, .index_name a, .subname, .name{
+	display: block;
+}
