@@ -10,12 +10,15 @@
 </span>
 	<%= image_tag @song.photo %> 
 
-
+  <p> 
   <b>Audio:</b>
   <%= audio_tag @song.mp3, :controls => true %>
-
+  </p>
+  
+  <p>
   <b>Youtube:</b>
   <%= render :partial => 'shared/youtube', :locals => {:youtube => @song.youtube } %>
+  </p>
 
 </div><!--.main-details-->
 <div class="meta">
