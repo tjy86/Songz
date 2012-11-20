@@ -1,0 +1,16 @@
+<%= render :partial => 'shared/errors', :locals => {:object => @genre} %>
+
+<%= form_for(@genre, :html => {:multipart => true}) do |f| %> <!--tells html form that there will be files included here-->
+  <ul>
+    <% @genre.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <div class="field grid_12">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

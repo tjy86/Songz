@@ -1,0 +1,15 @@
+<div class="name">
+	<%= @genre.name %> <%= link_to 'Edit', edit_genre_path(@genre),:class => "edit" %>
+</div>
+<div class="main-details grid_8">
+	
+</div> <!--.main-details-->
+<div class='meta grid_4'>
+  <h4>Albums</h4>
+  <ul>
+        <% @albums.each do |album| %>
+        <li><%= link_to album.name, album %></li>
+        <% end %>
+  </ul>
+  <%= link_to 'Add all albums', :add_all, method: :post %>
+</div><!--.grid_4-->

@@ -1,0 +1,13 @@
+<h1>Genres</h1>
+
+<div class="index">
+<% @genres.each do |genre| %>
+    <div class="index-box grid_3">
+    	<div class="buttons">
+    		<span class="index_name"><%= link_to genre.name, genre %></span>
+	    	<%= link_to 'Edit', edit_genre_path(genre) %>
+	      	<%= link_to 'Destroy', genre, method: :delete, data: { confirm: 'Are you sure?' } %>
+    	</div><!--.buttons-->
+    </div>
+<% end %>
+</div><!--.index-->
