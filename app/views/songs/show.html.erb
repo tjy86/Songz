@@ -11,12 +11,5 @@
 <div class="meta">
 	<h4>Details</h4>
 	<div class="media"> 
-  <b>Audio:</b>
-  <%= audio_tag @song.mp3, :controls => true %>
-  </div>
   
-  <div class="media">
-  <b>Youtube:</b>
-  <%= render :partial => 'shared/youtube', :locals => {:youtube => @song.you_tube } %>
-  </div>
 </div>
