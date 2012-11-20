@@ -4,11 +4,16 @@ class AlbumsController < ApplicationController
 	end
 
 	def show
+		@artists = []
 		album_id = params[:id]
+
 		@album = Album.find(album_id)
-		if @album.songs[0]
-			@album_artist = @album.songs[0].artists[0]
+		# this is to take each song on a album and and sees which artist belongs to that song and assigns it to an array
+		@album.songs.each do |song|
+			@artists << song.artists 
 		end
+
+		
 	end
 
 	def new
