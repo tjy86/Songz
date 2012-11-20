@@ -3,10 +3,7 @@
 </div>
 <div class="main-details grid_8">
 <span class="subname">
-	Artist:
-	<%= link_to @song.artist, @artist %>
-	Album:
-	<!-- <%= link_to @album.name, @album %> -->
+	
 </span>
 	<%= image_tag @song.photo %> 
 
@@ -17,7 +14,7 @@
   
   <p>
   <b>Youtube:</b>
-  <%= render :partial => 'shared/youtube', :locals => {:youtube => @song.youtube } %>
+  <%= render :partial => 'shared/youtube', :locals => {:youtube => @song.you_tube } %>
   </p>
 
 </div><!--.main-details-->
