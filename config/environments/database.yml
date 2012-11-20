@@ -4,7 +4,7 @@ development:
   database: songz_development
   pool: 5
   username: postgres
-  password: 
+  password: 123
 
 production:
   adapter: postgresql
@@ -12,4 +12,4 @@ production:
   database: songz_production
   pool: 5
   username: postgres
-  password: 
+  password: 123
