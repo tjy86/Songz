@@ -8,7 +8,7 @@
   <h4>Albums</h4>
   <ul>
         <% @albums.uniq.each do |album| %>
-        <li><%= link_to album[0].name, album %></li>
+    <li><%= link_to album[0].name, album %></li>
         <% end %>
   </ul>
   <%= link_to 'Add all albums', :add_all, method: :post %>
