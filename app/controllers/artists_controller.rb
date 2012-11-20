@@ -10,7 +10,7 @@ class ArtistsController < ApplicationController
   def show
     artist_id = params[:id]
     @artist = Artist.find(artist_id)
-    @albums = @artist.songs.map { |x| x.albums.map{ |x| x.name}  }
+    @albums = @artist.songs.map { |x| x.albums.map{ |album| album}  }
 
   end
 

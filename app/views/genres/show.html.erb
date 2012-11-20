@@ -5,10 +5,10 @@
 	
 </div> <!--.main-details-->
 <div class='meta grid_4'>
-  <h4>Albums</h4>
+  <h4>Songs</h4>
   <ul>
-        <% @albums.each do |album| %>
-        <li><%= link_to album.name, album %></li>
+        <% @genre.songs.each do |song| %>
+        <li><%= link_to song.name, song %></li>
         <% end %>
   </ul>
   <%= link_to 'Add all albums', :add_all, method: :post %>

@@ -12,8 +12,6 @@ class AlbumsController < ApplicationController
 		@album.songs.each do |song|
 			@artists << song.artists 
 		end
-
-		
 	end
 
 	def new

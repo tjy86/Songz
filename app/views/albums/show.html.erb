@@ -2,7 +2,7 @@
 	<%= @album.name %> <%= link_to 'Edit', edit_album_path(@album), :class => "edit" %>
 </div>
 <div class="subname">
-	Artist: <%= @artists.to_sentence %>
+	Artist: <%= @artists[0][0].name %>
 </div>
 <div class="main-details grid_8">
 	<%= image_tag @album.photo  %>
