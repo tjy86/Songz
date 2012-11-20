@@ -11,8 +11,7 @@
 #
 
 class Album < ActiveRecord::Base
-	has_many :songs
-	belongs_to :artist
+	has_and_belongs_to_many :songs
 
 	validates :name, :photo, :presence => true
 	validates :name, :uniqueness => true
